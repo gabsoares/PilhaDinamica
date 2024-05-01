@@ -36,6 +36,31 @@
             }
         }
 
+        public void Search()
+        {
+            Livro aux = topo;
+            string searchTitle;
+            Console.Write("Digite o livro que você quer procurar: ");
+            searchTitle = Console.ReadLine();
+            if (Vazia())
+            {
+                Console.WriteLine("Não tem como procurar numa pilha vazia!!!");
+                Console.WriteLine("Pressione qualquer tecla para continuar...");
+                Console.ReadKey();
+            }
+            else
+            {
+                if (aux.getTitulo() == searchTitle)
+                {
+                    Console.WriteLine($"O livro {aux.getTitulo()} foi encontrado");
+                }
+                else
+                {
+                    Console.WriteLine("O livro desejado não está na pilha");
+                }
+            }
+        }
+
         bool Vazia()
         {
             if (topo == null)

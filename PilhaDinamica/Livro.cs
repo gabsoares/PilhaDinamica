@@ -11,6 +11,11 @@
             this.anterior = null;
         }
 
+        public string getTitulo()
+        {
+            return this.titulo;
+        }
+
         public void setAnterior(Livro anterior)
         {
             this.anterior = anterior;
